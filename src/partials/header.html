@@ -1,3 +1,37 @@
-<header class="header">
-  <div class="container"></div>
+<header>
+  <div class="container header__container">
+    <a class="logo" href="./index.html" logo>
+      <div class="logo__name">
+        Hell<svg class="logo__icon" width="22" height="30">
+          <use href="./images/icons.svg#icon-logo"></use></svg
+        >EN
+      </div>
+      <div class="logo__descr"><span class="logo__descr--accent">hellish</span>english</div>
+    </a>
+    <div class="header__menu" data-menu-mob>
+      <nav class="nav" data-menu-tab>
+        <ul class="nav__list grid">
+          <li class="nav_item">
+            <a class="nav__link" href="">Studying program</a>
+          </li>
+          <li class="nav_item"><a class="nav__link" href="">About</a></li>
+          <li class="nav_item">
+            <a class="nav__link" href="">Training options</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav__link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn--light header__btn" type="button" data-modal-open>
+        consultation by phone
+      </button>
+    </div>
+    <button class="menu-btn" type="button" data-menu-button aria-expanded="false">
+      <svg class="menu-btn__icon" width="20" height="15">
+        <use class="menu-btn__icon--menu" href="./images/icons.svg#icon-menu"></use>
+        <use class="menu-btn__icon--close" href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
 </header>

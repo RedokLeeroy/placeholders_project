@@ -1,0 +1,35 @@
+.logo {
+	color: var(--title-text-color);
+	&__name {
+		display: flex;
+		align-items: center;
+
+		font-weight: 800;
+		font-size: 26px;
+		line-height: 1.23;
+		letter-spacing: 0.04em;
+	}
+	&__icon {
+		fill: var(--brand-color);
+	}
+	&__descr {
+		margin-left: 2px;
+		margin-bottom: 3px;
+		font-weight: 700;
+		font-size: 8px;
+		line-height: 1.25;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+	}
+	&__descr--accent {
+		color: var(--brand-color);
+	}
+	@include mq(mobile-only) {
+		transform: scale(0.665);
+	}
+}
+
+.logo-light {
+	z-index: 10;
+	color: var(--second-text-color);
+}

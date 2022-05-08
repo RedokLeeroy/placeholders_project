@@ -1,0 +1,51 @@
+.nav {
+	@include mq(tablet-only) {
+		position: fixed;
+		display: none;
+		justify-content: center;
+		top: 0;
+		left: 0;
+		padding-top: 159px;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--bg-color-menu);
+		&.is-open {
+			display: flex;
+		}
+	}
+	@include mq(desktop) {
+		margin-right: 60px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		--indent: 0;
+		@include mq(desktop) {
+			flex-direction: row;
+			--indent: 40px;
+		}
+	}
+
+	&__item {
+		--items: 4;
+	}
+	&__link {
+		font-weight: 800;
+		font-size: 26px;
+		line-height: 1.8;
+		color: var(--second-text-color);
+		&:hover,
+		&:focus {
+			color: var(--brand-color);
+		}
+		@include mq(tablet) {
+		}
+		@include mq(desktop) {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 1.21;
+			text-transform: uppercase;
+			color: var(--primay-text-color);
+		}
+	}
+}

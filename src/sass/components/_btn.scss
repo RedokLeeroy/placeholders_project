@@ -1,0 +1,26 @@
+.btn--accent {
+	padding: 14px 5px;
+	width: 260px;
+
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1.25;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--second-text-color);
+	background-color: var(--brand-color);
+	@include mq(desktop) {
+		padding: 28px 5px;
+		width: 354px;
+		font-size: 14px;
+		line-height: 1.21;
+		letter-spacing: 0.14em;
+	}
+}
+
+.btn--light {
+	@extend .btn--accent;
+	color: var(--brand-color);
+	background-color: transparent;
+	border: 2px solid var(--brand-color);
+}
