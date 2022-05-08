@@ -1,0 +1,89 @@
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 33px;
+	padding-bottom: 33px;
+	@include mq(tablet-only) {
+		justify-content: flex-start;
+	}
+}
+
+.header__menu {
+	z-index: 5;
+
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	@include mq(mobile-only) {
+		align-items: flex-start;
+		position: fixed;
+		flex-direction: column;
+		padding: 108px 20px 20px 20px;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--bg-color-menu);
+		display: none;
+		&.is-open {
+			display: flex;
+			overflow-y: scroll;
+		}
+		@include mq(mobile-only-land) {
+			padding: 20px 15px;
+		}
+	}
+	@include mq(tablet-only) {
+		margin-left: auto;
+	}
+}
+
+.logo-lendscape {
+	@include mq(mobile-only-land) {
+		position: fixed;
+		top: 33px;
+		right: 60px;
+	}
+}
+
+.header__btn {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq(tablet) {
+		margin: 0;
+	}
+}
+
+.menu-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	background-color: transparent;
+	fill: var(--btn-menu-color);
+	& .menu-btn__icon--menu {
+		opacity: 1;
+	}
+	& .menu-btn__icon--close {
+		opacity: 0;
+	}
+	&.is-open .menu-btn__icon--menu {
+		opacity: 0;
+	}
+	&.is-open .menu-btn__icon--close {
+		opacity: 1;
+		fill: var(--second-text-color);
+	}
+	@include mq(tablet-only) {
+		margin-left: 34px;
+	}
+	@include mq(desktop) {
+		display: none;
+	}
+	@include mq(mobile-only-land) {
+		position: fixed;
+		right: 20px;
+		top: 40px;
+	}
+}
