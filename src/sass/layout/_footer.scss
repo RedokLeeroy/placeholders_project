@@ -1,33 +1,40 @@
 .footer__container {
   padding-top: 30px;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    justify-content: space-between;
   }
 
   @include mq(desktop) {
+    justify-content: flex-start;
     display: flex;
+    align-items: center;
     padding-top: 52px;
     padding-bottom: 53px;
   }
 }
 
-// .logo__placeholder {
-//   margin-bottom: 21px;
+.logo__footer {
+  margin-bottom: 21px;
 
-//   @include mq(tablet) {
-//     margin-bottom: 0px;
-//   }
-// }
+  @include mq(tablet) {
+    margin-bottom: 0px;
+  }
+}
 
 .footer__contacts {
   @include mq(tablet) {
     display: flex;
     align-items: center;
+    margin-left: auto;
   }
 
   @include mq(desktop) {
@@ -37,7 +44,6 @@
 
 .contact__link {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   @include mq(tablet) {
@@ -73,16 +79,16 @@
   }
 }
 
-.contacts__social-link {
+.contact__social-link {
   margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/footer/instagram.png);
 
   @include mq(tablet) {
     margin-top: 0px;
   }
-
-  background-image: url(../images/footer/instagram.png);
 
   @include mq(retina) {
     background-image: url(../images/footer/instagram@2x.png);
