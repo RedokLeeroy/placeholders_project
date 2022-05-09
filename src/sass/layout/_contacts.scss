@@ -82,3 +82,40 @@
   flex-direction: column;
   align-items: center;
 }
+
+.contacts__form__name {
+  background-color: transparent;
+  width: 280px;
+  height: 48px;
+
+  padding-left: 28px;
+  margin-bottom: 20px;
+  border: 1px solid var(--bg-color-primary);
+
+  color: var(--second-text-color);
+  &::placeholder {
+    color: var(--second-text-color);
+  }
+}
+
+.contacts__form__phone {
+  background-color: transparent;
+
+  width: 280px;
+  height: 48px;
+
+  padding-left: 28px;
+  margin-bottom: 50px;
+
+  color: var(--second-text-color);
+  border: 1px solid var(--bg-color-primary);
+  &::placeholder {
+    color: var(--second-text-color);
+  }
+}
+
+.btn--position {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
