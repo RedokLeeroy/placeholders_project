@@ -1,8 +1,8 @@
 .we-do__container {
-    padding: 50px 0;
+    padding-top: 50px;
 }
 
-.header-lg {
+.we-do__title {
     margin-bottom: 30px;
     font-weight: 800;
     font-size: 20px;
@@ -12,16 +12,42 @@
     color: var(--title-text-color);
 
     transition: color;
+
+    @include mq(tablet) {
+        font-weight: 26px;
+    }
+    @include mq(desktop) {
+        font-weight: 46px;
+    }
+}
+
+.we-do__list {
+    // --indent: 20;
+    align-items: center;
 }
 
 .we-do__item {
-    max-width: 280px;
-    max-height: 280px;
-    padding-top: 30px;
-
-    display: block;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    min-height: 280px;
+    max-width: 329px;
+    // max-height: 280px;
+    --items: 1;
+    padding-top: 30px;
+    padding-right: 11px;  
+    padding-left: 11px;
+
+    @include mq(tablet) {
+        --items: 2;
+        min-height: 334px;
+    }
+    @include mq(desktop) {
+        --items: 3;
+        min-height: 396px;
+    }
+
+    outline: 1px solid brown;
 }
 
 .we-do__icon {
@@ -35,16 +61,19 @@
 }
 
 .we-do__item-stress-text {
-    text-align: center;
+    // text-align: center;
 
     font-weight: 700;
     font-size: 14px;
     line-height: 1.43;
-    // letter-spacing: 0.08em;
 
     color: var(--title-text-color);
 
     transition: color;
+
+    @include mq(desktop) {
+        font-size: 20px;
+    }
 }
 
 .we-do__item-stress-text::after {
@@ -61,12 +90,11 @@
 }
 
 .we-do__item-text {
-    text-align: center;
+    // text-align: center;
 
     font-weight: 500;
     font-size: 12px;
     line-height: 1.67;
-    // letter-spacing: 0.08em;
 
     color: #B9B9B9;
 }
