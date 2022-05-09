@@ -1,0 +1,84 @@
+.contacts {
+  max-width: 1680px;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: cover;
+  background-color: var(--bg-color-second);
+  background-image: url(../images/contacts/footer_sm.png);
+
+  @include mq(retina) {
+    background-image: url(../images/contacts/footer@2x_sm.png);
+  }
+}
+
+.contacts__container {
+  padding-top: 56px;
+  padding-bottom: 55px;
+
+  max-width: 1090px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(tablet) {
+    padding-top: 66px;
+    padding-bottom: 67px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 100px;
+    padding-bottom: 62px;
+  }
+}
+
+.contacts__title {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--second-text-color);
+  &__text-orange {
+    color: var(--brand-color);
+  }
+  @include mq(tablet) {
+    font-size: 26px;
+  }
+  @include mq(desktop) {
+    font-size: 46px;
+  }
+}
+
+.contacts__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 43px;
+
+  color: var(--second-text-color);
+  &-orange {
+    color: var(--brand-color);
+  }
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 50px;
+    margin-bottom: 23px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 56px;
+    margin-bottom: 56px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
