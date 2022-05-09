@@ -1,0 +1,106 @@
+.container--footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include mq(tablet-only) {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    padding-top: 52px;
+    padding-bottom: 53px;
+  }
+}
+
+// заглушка на поки що
+.logo__placeholder {
+  margin-bottom: 21px;
+
+  @include mq(tablet) {
+    margin-bottom: 0px;
+  }
+}
+// кінець заглушки
+
+.footer__contacts {
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  @include mq(desktop) {
+    margin-left: 290px;
+  }
+}
+
+.footer__contacts__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(tablet) {
+    margin-right: 24px;
+    border-right: 1px solid #b9b9b9;
+  }
+}
+
+.footer__contacts__icon {
+  fill: var(--brand-color);
+  margin-right: 10px;
+}
+
+.footer__contacts__number {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+
+  letter-spacing: 0.08em;
+
+  color: #111518;
+
+  @include mq(tablet) {
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-right: 24px;
+  }
+
+  @include mq(desktop) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.footer__contacts__social-link__icon {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(tablet) {
+    margin-top: 0px;
+  }
+}
+
+.container--rights-section {
+  background-color: var(--title-text-color);
+  padding-bottom: 21px;
+  padding-top: 21px;
+}
+
+.footer__bottom-section__rights {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+
+  display: flex;
+  justify-content: center;
+  color: #b9b9b9;
+
+  @include mq(tablet) {
+    display: block;
+  }
+}
