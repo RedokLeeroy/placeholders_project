@@ -1,3 +1,67 @@
 <section class="hero">
-  <div class="container"></div>
+  <div class="container hero__container">
+    <div class="hero__bg-box">
+      <!-- <svg class="hero__bg-img" width="768" height="618">
+        <use href="./images/icons.svg#icon-wave"></use>
+      </svg> -->
+
+      <picture>
+        <source
+          srcset="./images/hero/vector_sm.png 1x, ./images/hero/vector-2x_sm.png 2x"
+          media="(min-width: 1366px)"
+        />
+
+        <source
+          srcset="./images/hero/vector_sm.png 1x, ./images/hero/vector-2x_sm.png 2x"
+          media="(min-width: 768px)"
+        />
+
+        <source
+          srcset="./images/hero/vector_sm.png 1x, ./images/hero/vector-2x_sm.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img
+          class="hero__bg-img"
+          src="./images/hero/vector_sm.png" width="320" height="665"
+          loading="lazy"
+        />
+   
+    </div>
+    <div class="hero__text-box">
+      <h1 class="hero__title">Complex preparation for English UPE</h1>
+      <p class="hero__text">It won’t be easy.</p>
+      <p class="hero__text--black">
+        But you’re guaranteed to get&#160;
+        <span class="hero__text--orange">+25 points</span>
+      </p>
+
+      <button class="hero__btn" type="button" data-modal-open>I want a free lesson</button>
+    </div>
+    <div class="hero__img-box">
+      <picture>
+        <source
+          srcset="./images/hero/group57_lg.png 1x, ./images/hero/group57-2x_lg.png 2x"
+          media="(min-width: 1366px)"
+        />
+
+        <source
+          srcset="./images/hero/group57_md.png 1x, ./images/hero/group57-2x_md.png 2x"
+          media="(min-width: 768px)"
+        />
+
+        <source
+          srcset="./images/hero/group57_sm.png 1x, ./images/hero/group57-2x_sm.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img
+          class="hero__img"
+          src="./images/hero/group57_sm.png"
+          alt="Our team"
+          width="208"
+          height="178"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
 </section>
