@@ -1,30 +1,30 @@
 .body-fixed {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .page {
-	color: var(--title-text-color);
-	background-color: var(--bg-color-primary);
-	font-family: var(--primary-font), sans-serif;
-	letter-spacing: 0.08em;
+  color: var(--title-text-color);
+  background-color: var(--bg-color-primary);
+  font-family: var(--primary-font), sans-serif;
+  letter-spacing: 0.08em;
 }
 
 .container {
-	max-width: 480px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: 480px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
-	@include mq(tablet) {
-		max-width: 768px;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
+  @include mq(tablet) {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
-	@include mq(desktop) {
-		max-width: 1366px;
-		padding-left: 16px;
-		padding-right: 16px;
-	}
+  @include mq(desktop) {
+    max-width: 1366px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
