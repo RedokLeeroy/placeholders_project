@@ -1,0 +1,36 @@
+.benefits__container {
+   max-width: 1314px;
+   display: flex;
+
+   flex-direction: row;
+   flex-wrap: wrap;
+   background-color: red;
+
+   padding-top: 70px;
+   padding-bottom: 70px;
+}
+
+.programs__card-list {
+   display: flex;
+   width: 356px;
+   margin-right: 40px;
+
+}
+
+.programs__card-list:last-child {
+   margin-right: 0;
+}
+
+.programs__number {
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 1.83;
+   color: var(--brand-color);
+}
+
+.programs__text {
+   font-weight: 700;
+   line-height: 1.83;
+   color: var(--title-text-color);
+
+}
