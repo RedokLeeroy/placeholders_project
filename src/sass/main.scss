@@ -3,8 +3,8 @@
 @import './utils/mixin';
 @import './utils/visually-hidden';
 @import './base/reset';
-@import './base/grid';
 @import './base/base';
+@import './base/grid';
 // components
 @import './components/logo';
 @import './components/nav';
@@ -14,4 +14,3 @@
 // layouts
 @import './layout/header';
 @import './components/advantages';
-@import './layout/footer';
