@@ -1,4 +1,4 @@
-.container--footer {
+.footer__container {
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -16,15 +16,13 @@
   }
 }
 
-// заглушка на поки що
-.logo__placeholder {
-  margin-bottom: 21px;
+// .logo__placeholder {
+//   margin-bottom: 21px;
 
-  @include mq(tablet) {
-    margin-bottom: 0px;
-  }
-}
-// кінець заглушки
+//   @include mq(tablet) {
+//     margin-bottom: 0px;
+//   }
+// }
 
 .footer__contacts {
   @include mq(tablet) {
@@ -37,7 +35,7 @@
   }
 }
 
-.footer__contacts__link {
+.contact__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,12 +46,12 @@
   }
 }
 
-.footer__contacts__icon {
+.contact__icon {
   fill: var(--brand-color);
   margin-right: 10px;
 }
 
-.footer__contacts__number {
+.contact__number {
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
@@ -75,7 +73,7 @@
   }
 }
 
-.footer__contacts__social-link__icon {
+.contacts__social-link {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -85,13 +83,13 @@
   }
 }
 
-.container--rights-section {
+.container__rights {
   background-color: var(--title-text-color);
   padding-bottom: 21px;
   padding-top: 21px;
 }
 
-.footer__bottom-section__rights {
+.rights {
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
