@@ -1,39 +1,26 @@
-.guarantee .container {
-  //----изменяем контейнер по макету----
-  @include mq(mobile-small) {
+.guarantee__container{
+  
     padding: 0;
-  }
-  @include mq(mobile) {
-    padding: 0;
-  }
-  @include mq(tablet-only) {
-    padding: 0 40px;
-  }
-  @include mq(desktop) {
-    margin-left: 183px;
-    margin-right: 183px;
-  }
+
 }
+  //----изменяем контейнер по макету----
+
 
 .guarantee__title {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: #fff;
   //----стили и размеры текста заголовка----
-  @include mq(mobile-small) {
+  
     font-weight: 800;
     font-size: 26px;
     line-height: 1.3;
 
     margin-bottom: 30px;
-  }
-  @include mq(mobile) {
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 1.3;
-
-    margin-bottom: 30px;
-  }
+  
+  
+    
+  
   @include mq(tablet-only) {
     font-weight: 800;
     font-size: 26px;
@@ -52,12 +39,9 @@
   display: flex;
   flex-direction: column;
   background-color: #f1f1f1;
-  @include mq(mobile-small) {
+  
     padding: 50px 20px;
-  }
-  @include mq(mobile) {
-    padding: 50px 20px;
-  }
+  
   @include mq(tablet-only) {
     padding: 30px 50px 30px 79px;
   }
@@ -66,18 +50,28 @@
   }
 }
 .guarantee-list__item {
+  //------подключаем и позиционруем свг через before-------//
   position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/icon/fire.svg);
+    height: 20px;
+    width: 15px;
+    @include mq(desktop) {
+      transform: translateX(5px) scale(1.5);
+    }
+  }
   //---задаем нижине отступы между елементами для разных устройств---
-  @include mq(mobile-small) {
-    &:not(:last-child) {
+  
+   
       margin-bottom: 23px;
-    }
-  }
-  @include mq(mobile) {
-    &:not(:last-child) {
-      margin-bottom: 23px;
-    }
-  }
+    
+  
+  
   @include mq(tablet) {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -99,12 +93,9 @@
     top: 24px;
     left: 6px;
     //---задаем высоту штрих линии отностиельно размера родительского елемента--
-    @include mq(mobile-small) {
+    
       height: 90%;
-    }
-    @include mq(mobile) {
-      height: 90%;
-    }
+    
     @include mq(tablet) {
       height: 79%;
     }
@@ -164,15 +155,5 @@
 }
 
 .guarantee-list__text--orange {
-  color: #ff6b09;
-}
-.guarantee-list__icon {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  //---смещаем и увеличиваем иконку для по макету для desktop-----
-  @include mq(desktop) {
-    transform: translateX(5px) scale(1.5);
-  }
+  color:var(--brand-color)
 }
