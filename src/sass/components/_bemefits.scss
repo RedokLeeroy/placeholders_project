@@ -1,0 +1,52 @@
+.benefits__container {
+    width: 1314px;
+ 
+    display: flex;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    background-color: red;
+ 
+    padding-top: 70px;
+    padding-bottom: 70px;
+ 
+    padding-left: 84px;
+ }
+ 
+ .programs__card {
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+ }
+ 
+ .programs__card-list {
+    display: flex;
+    margin-right: 40px;
+ 
+ 
+ }
+ 
+ .programs__card-list:nth-child(3n+3) {
+    margin-right: 0;
+ }
+ 
+ .programs__number {
+ 
+    font-weight: 700;
+    line-height: 1.83;
+    color: var(--brand-color);
+ }
+ 
+ .programs__text {
+    width: 356px;
+ 
+    font-weight: 700;
+    line-height: 1.83;
+    color: var(--title-text-color);
+    margin-top: 10px;
+    margin-bottom: 32px;
+ 
+ }
