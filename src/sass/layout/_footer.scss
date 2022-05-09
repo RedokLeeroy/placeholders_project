@@ -81,9 +81,15 @@
   @include mq(tablet) {
     margin-top: 0px;
   }
+
+  background-image: url(../images/footer/instagram.png);
+
+  @include mq(retina) {
+    background-image: url(../images/footer/instagram@2x.png);
+  }
 }
 
-.container__rights {
+.container__footer--rights {
   background-color: var(--title-text-color);
   padding-bottom: 21px;
   padding-top: 21px;
