@@ -1,8 +1,8 @@
 .programs__container {
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.55px;
-  letter-spacing: 0.08;
+  line-height: 1.55;
+
   font-family: var(--primary-font);
   color: var(--second-text-color);
 }
@@ -11,10 +11,7 @@
   background-color: var(--bg-color-second);
   padding-top: 50px;
   padding-bottom: 50px;
-  
 
-
-  
   @include mq(tablet) {
     max-width: 768px;
     padding-top: 60px;
@@ -33,9 +30,8 @@
 
   @media screen and (max-width: 766px) {
     flex-direction: column;
-   
+
     margin-left: 100px;
-    
   }
 
   @media screen and (min-width: 768px) and (max-width: 1364px) {
@@ -51,6 +47,7 @@
 }
 
 .programs__head {
+  position: relative;
   @include mq(desktop) {
     margin-right: 30px;
   }
@@ -61,12 +58,66 @@
   }
 }
 
+.programs__head::before {
+  @media screen and (max-width: 766px) {
+    position: absolute;
+    top: 8px;
+    left: -28px;
+    content: '';
+    width: 1px;
+    height: calc(100% + 50px);
+
+    background-color: var(--second-text-color);
+  }
+}
+.programs__head:last-child::before {
+  height: 0px;
+}
+
+.programs__head::before {
+  @media screen and (min-width: 768px) and (max-width: 1364px) {
+    position: absolute;
+    top: 8px;
+    left: -57px;
+    content: '';
+    width: 1px;
+    height: calc(100% + 40px);
+
+    background-color: var(--second-text-color);
+  }
+
+.programs__head:last-child::before {
+  height: 0px;
+}
+}
+
+.programs__head::before {
+  @media screen and (min-width: 1366px){
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    content: '';
+    height: 1px;
+    width: calc(1366px + 80px);
+
+    background-color: var(--second-text-color);
+  }
+
+    .programs__head:not(:first-child)::before {
+    width: 0px;
+
+
+}
+}
+
+
+
+
 .programs__title {
   font-weight: 800;
   font-size: 20px;
   line-height: 1.66;
-margin-bottom: 43px;
-
+  margin-bottom: 43px;
 
   @media screen and (max-width: 766px) {
     text-align: center;
@@ -90,12 +141,12 @@ margin-bottom: 43px;
   height: 16px;
   border-radius: 50%;
   background-color: #ff6b09;
-  top: 0px;
+  top: 5px;
   left: -35px;
 
   @include mq(tablet) {
     font-size: 26px;
-    top: 0px;
+
     left: -65px;
   }
 
@@ -109,14 +160,19 @@ margin-bottom: 43px;
   position: relative;
   font-size: 14px;
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 2;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
 
   @include mq(tablet) {
     line-height: 2;
+    margin-top: 30px;
+    margin-bottom: 5px;
   }
 
   @include mq(desktop) {
     font-size: 28px;
+    text-transform: lowercase;
   }
 }
 
@@ -151,30 +207,17 @@ margin-bottom: 43px;
 .programs__subhead {
   display: flex;
   flex-direction: column;
- 
 }
-
 
 .programs__head:not(:last-child) {
   @media screen and (max-width: 766px) {
-  margin-bottom: 42px;
+    margin-bottom: 42px;
+  }
 }
-}
-
-
 
 .programs__card {
-  margin-top: 5px;
- margin-bottom: 8px;
-
-  @include mq(tablet) {
-    margin-top: 10px;
-    margin-bottom: 25px;
-  }
-
-  @include mq(desktop) {
-    margin-top: 10px;
-    margin-bottom: 25px;
+  @media screen and (max-width: 766px) {
+    margin-bottom: 8px;
   }
 }
 .programs__sublist {
@@ -184,13 +227,19 @@ margin-bottom: 43px;
   line-height: 1.66;
   color: var(--brand-color);
   font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 
   @include mq(tablet) {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   @include mq(desktop) {
     font-size: 20px;
     padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 25px;
   }
 }
 
@@ -248,17 +297,13 @@ margin-bottom: 43px;
   display: flex;
   width: 143px;
 
-
   @media screen and (max-width: 766px) {
-   flex-direction: column;
+    flex-direction: column;
     margin-top: 5px;
   }
 
-
-
   @include mq(tablet) {
     margin-top: 5px;
-    
   }
 
   @include mq(desktop) {
