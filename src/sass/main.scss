@@ -12,10 +12,13 @@
 @import './components/modal';
 @import './components/callback';
 @import './components/how-we-do';
-// layouts
-@import './layout/header';
+@import './components/programs';
+@import './components/benefits';
 @import './components/hero';
+@import './components/guarantee';
 @import './components/advantages';
-@import './layout/guarantee';
+@import './components/contacts';
+// layouts
+
+@import './layout/header';
 @import './layout/footer';
-@import './layout/contacts';
