@@ -125,6 +125,14 @@
     outline: transparent;
   }
 
+  &:valid:not(:placeholder-shown) {
+    border-color: #4caf50;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #f44336;
+  }
+
   @include mq(desktop) {
     max-width: 478px;
     height: 70px;
@@ -150,6 +158,14 @@
   &:hover,
   &:focus {
     outline: transparent;
+  }
+
+  &:valid:not(:placeholder-shown) {
+    border-color: #4caf50;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #f44336;
   }
 
   @include mq(desktop) {

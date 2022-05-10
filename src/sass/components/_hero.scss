@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 30px;
+  padding-top: 20px;
 
   @include mq(tablet) {
     padding-top: 55px;
@@ -9,29 +9,6 @@
     padding-top: 100px;
   }
 }
-
-// .hero__bg-img {
-//   position: absolute;
-//   display: flex;
-//   justify-content: center;
-//   top: 0%;
-//   left: 50%;
-//   transform: translate(-50%, 0%);
-//   z-index: -1;
-//   filter: drop-shadow(-5px 21px 26px rgba(0, 0, 0, 0.4));
-//   width: 768px;
-//   height: 618px;
-
-//   @include mq(tablet) {
-//     width: 768px;
-//     height: 556px;
-//   }
-
-//   @include mq(desktop) {
-//     width: 1688px;
-//     height: 878px;
-//   }
-// }
 
 .hero__container {
   position: relative;
@@ -143,7 +120,7 @@
 
   @include mq(desktop) {
     top: -90px;
-    left: 646px;
+    left: 620px;
     width: 842px;
     height: 718px;
   }
