@@ -1,0 +1,16 @@
+.about__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    outline: 1px solid maroon;
+}
+
+.about__title {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+
+    color: var(----title-text-color);
+}
