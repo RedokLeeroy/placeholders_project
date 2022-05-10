@@ -30,25 +30,18 @@
   }
 }
 
-.footer__contacts {
-  @include mq(tablet) {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-  }
-
-  @include mq(desktop) {
-    margin-left: 290px;
-  }
-}
-
 .contact__link {
   display: flex;
   align-items: center;
 
   @include mq(tablet) {
+    margin-left: auto;
     margin-right: 24px;
     border-right: 1px solid #b9b9b9;
+  }
+
+  @include mq(desktop) {
+    margin-left: 290px;
   }
 }
 
@@ -98,14 +91,15 @@
 
 .container__footer--rights {
   background-color: var(--title-text-color);
-  padding-bottom: 21px;
-  padding-top: 21px;
 }
 
 .rights {
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
+
+  padding-top: 21px;
+  padding-bottom: 21px;
 
   display: flex;
   justify-content: center;
