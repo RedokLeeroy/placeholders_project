@@ -109,7 +109,7 @@
             background-color: var(--brand-color);
             transition: color;
 
-            & .we-do__item:hover {
+            &:hover {
                 background-color: var(--second-text-color);
             }
 
