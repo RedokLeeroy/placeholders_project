@@ -47,6 +47,12 @@
         min-height: 396px;
     }
 
+    .we-do__icon+.we-do__item-stress-text+.we-do__item-text+.we-do__item.we-do__item:hover {
+        fill: var(--second-text-color);
+        color: var(--title-text-color);
+        background: var(--brand-color);
+    }
+
     outline: 1px solid brown;
 }
 
@@ -78,7 +84,6 @@
 
 .we-do__item-stress-text::after {
     content: '';
-
     display: flex;
     margin: 15px 0;
     width: 20px;
