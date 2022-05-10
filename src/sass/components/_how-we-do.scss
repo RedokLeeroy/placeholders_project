@@ -25,7 +25,6 @@
 
 .we-do__list {
     --indent: 15px;
-    // align-items: center;
 
     @include mq(tablet) {
         --indent: 20px;
@@ -68,8 +67,7 @@
             background-color: inherit;
         }
     }
-
-    outline: 1px solid brown;
+    // outline: 1px solid brown;
 }
 
 .we-do__icon {
