@@ -7,6 +7,21 @@
   background-color: var(--bg-color-primary);
   font-family: var(--primary-font), sans-serif;
   letter-spacing: 0.08em;
+
+  background-image: url(../images/icon/wave.svg);
+  background-repeat: no-repeat;
+  background-position: 14% 150px;
+  background-size: 768px 618px;
+
+  @include mq(tablet) {
+    background-position: 50% -78px;
+    background-size: 840px 796px;
+  }
+
+  @include mq(desktop) {
+    background-position: 50% 50px;
+    background-size: 1688px 880px;
+  }
 }
 
 .container {
