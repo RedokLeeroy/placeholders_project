@@ -90,7 +90,7 @@
 }
 
 .container__footer--rights {
-  background-color: var(--title-text-color);
+  background: linear-gradient(to right, var(--title-text-color) 50%, var(--title-text-color) 50%);
 }
 
 .rights {
