@@ -1,6 +1,7 @@
 .about__container {
     padding-top: 50px;
     padding-bottom: 50px;
+    max-width: 1205px;
 }
 
 .about__title {
@@ -28,6 +29,7 @@
 
     @include mq(tablet) {
             flex-direction: row;
+            margin-bottom: 0;
     }
 }
 
@@ -57,42 +59,37 @@
 }
 
 .about__name {
-    margin-bottom: 10px;
-
+    padding-bottom: 10px;
+    
     font-weight: 800;
     font-size: 20px;
     line-height: 1.2;
+    border-bottom: 1px solid var(--primay-text-color);
 
     @include mq(tablet) {
-        margin-bottom: 30px;
+        padding-bottom: 10px;
         font-size: 24px;
     }
     @include mq(desktop) {
+        padding-bottom: 24px;
         font-size: 37px;
     }
 }
 
 .about__list {
-    padding-top: 20px;
-    border-top: 1px solid var(--primay-text-color);
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     // - горизонтальна риска знизу кнотейнера - 
     &::after {
             content: "";
             display: flex;
-            margin-top: 15px;
-            margin-bottom: 15px;
             width: 20px;
             height: 2px;
 
             background-color: var(--brand-color);
             transition: color;
-
-            @include mq(tablet) {
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-    }
+        }
 }
 
 .about__list-item {
@@ -108,7 +105,7 @@
     &::before {
         content: "";
         position: absolute;
-        top: 0px;
+        top: 2px;
         left: -30px;
         flex-shrink: 0;
         width: 17px;
@@ -147,7 +144,7 @@
         font-size: 10px;
     }
     @include mq(desktop) {
-        margin-top: 30px;
+        margin-bottom: 15px;
         font-size: 18px;
     }
 }
@@ -165,7 +162,7 @@
         font-size: 11px;
     }
     @include mq(desktop) {
-        margin-top: 20px;
+        margin-top: auto;
         font-size: 18px;
     }
 }
