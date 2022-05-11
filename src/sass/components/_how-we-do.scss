@@ -12,7 +12,7 @@
     text-align: center;
 
     color: var(--title-text-color);
-    transition: color;
+    transition: color 150ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
 
     @include mq(tablet) {
         font-size: 26px;
@@ -43,6 +43,8 @@
     fill: var(--brand-color);
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
+    transition: background-color 150ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+
     @include mq(tablet) {
         --items: 2;
         min-height: 334px;
@@ -72,7 +74,7 @@
     margin-bottom: 20px;
 
     fill: var(--brand-color);
-    transition: fill;
+    transition: fill 150ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
 }
 
 .we-do__item-stress-text {
@@ -85,7 +87,7 @@
     line-height: 1.43;
 
     color: var(--title-text-color);
-    transition: color;
+    transition: color 150ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
 
     @include mq(desktop) {
         font-size: 20px;
@@ -103,7 +105,7 @@
             height: 2px;
     
             background-color: var(--brand-color);
-            transition: color;
+            transition: color 150ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
 
             .we-do__item:hover & {
                 background-color: var(--second-text-color);
