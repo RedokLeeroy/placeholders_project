@@ -1,150 +1,147 @@
+.guarantee__container {
+  padding: 0;
 
-  .guarantee__container {
-   padding: 0;
- 
-   @include mq(tablet) {
-     padding-left: 40px;
-     padding-right: 40px;
-     
-   }
-   @include mq(desktop) {
-     padding: 0;
-     margin-left: auto;
-     margin-right: auto;
- 
-     //---если не ставить эти значения при размере екрана 1680 макет не сходится по переносу текста--
-    
-   }
-   @include mq(retina) {
-     margin-left: auto;
-     margin-right: auto;
-   }
- }
- 
- .guarantee__title {
-   text-align: center;
-   letter-spacing: 0.03em;
-   background-color: #fff;
-   //----стили и размеры текста заголовка----
- 
-   font-weight: 800;
-   font-size: 26px;
-   line-height: 1.3;
- 
-   margin-bottom: 30px;
- 
-   @include mq(desktop) {
-     font-size: 46px;
-     line-height: 1.3;
-     margin-bottom: 50px;
-   }
- }
- .guarantee-list {
-   display: flex;
-   flex-direction: column;
-   background-color: #f1f1f1;
- 
-   padding: 50px 20px;
- 
-   @include mq(tablet) {
-     padding: 30px 50px 30px 79px;
-   }
-   @include mq(desktop) {
-     padding: 50px 112px 45px 112px;
-   }
- }
- 
- .guarantee-list__item {
-   position: relative;
-   &:not(:last-child) {
-     margin-bottom: 20px;
-   }
- 
-   //------подключаем и позиционруем свг через before-------//
-   &::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     background-image: url(../images/icon/fire.svg);
-     height: 20px;
-     width: 15px;
-     @include mq(desktop) {
-       transform: translateX(5px) scale(1.5);
-     }
-   }
- 
-   @include mq(tablet) {
-     &:not(:last-child) {
-       margin-bottom: 20px;
-     }
-   }
-   @include mq(tablet) {
-     &:not(:last-child) {
-       margin-bottom: 20px;
-     }
-   }
- }
- 
- .guarantee .guarantee-list__text {
-   font-family: var(--primary-font);
-   padding-left: 35px;
- 
-   font-weight: 500;
-   font-size: 12px;
-   line-height: 1.67;
-   letter-spacing: normal;
-   color: #3d3d3d;
-   //----создаем и позиционируем левую штрих линию через бордер----
-   &::before {
-     content: '';
-     border-left: 1px dashed #b9b9b9;
- 
-     position: absolute;
-     top: 24px;
-     left: 6px;
-     height: 90%;
- 
-     @include mq(tablet) {
-       height: 79%;
-     }
-     @include mq(desktop) {
-       height: 67%;
-       top: 29px;
-       left: 11px;
-     }
-     //---убираем рамку последнему елементу, селектор не применяется----
-     // &:last-child {
-     //   border-left: none;
-     // }
-   }
-   // --- убираем рамку последнему елементу, попытка 2, селектор не применяется----
-   // &::before:last-child {
-   //   content: '';
-   //   border-left: none;
-   // }
-   // ------убираем линию последнему елементу через отдельный клас----
-   &.guarantee-list__text--last::before {
-     content: '';
-     border-left: none;
-   }
- 
-   @include mq(tablet) {
-     //-----задаем высоту елементу текста для сходста по макету до пикселя----
- 
-     // padding-left: 40px;
-   }
-   @include mq(desktop) {
-     font-weight: 500;
-     font-size: 20px;
-     line-height: 1.4;
-     //-----задаем высоту елементу текста для сходста по макету до пикселя----
-     // height: 60px;
- 
-     padding-left: 52px;
-   }
- }
- 
- .guarantee-list__text--orange {
-   color: var(--brand-color);
- }
+  @include mq(tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include mq(desktop) {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    //---если не ставить эти значения при размере екрана 1680 макет не сходится по переносу текста--
+  }
+  @include mq(retina) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.guarantee__title {
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #fff;
+  //----стили и размеры текста заголовка----
+
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.3;
+
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
+    font-size: 46px;
+    line-height: 1.3;
+    margin-bottom: 50px;
+  }
+}
+.guarantee-list {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+
+  padding: 50px 20px;
+
+  @include mq(tablet) {
+    padding: 30px 50px 30px 79px;
+  }
+  @include mq(desktop) {
+    padding: 50px 112px 45px 112px;
+  }
+}
+
+.guarantee-list__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  //------подключаем и позиционруем свг через before-------//
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/icon/fire.svg);
+    height: 20px;
+    width: 15px;
+    @include mq(desktop) {
+      transform: translateX(5px) scale(1.5);
+    }
+  }
+
+  @include mq(tablet) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include mq(tablet) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.guarantee .guarantee-list__text {
+  font-family: var(--primary-font);
+  padding-left: 35px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: normal;
+  color: #3d3d3d;
+  //----создаем и позиционируем левую штрих линию через бордер----
+  &::before {
+    content: '';
+    border-left: 1px dashed #b9b9b9;
+
+    position: absolute;
+    top: 24px;
+    left: 6px;
+    height: 90%;
+
+    @include mq(tablet) {
+      height: 79%;
+    }
+    @include mq(desktop) {
+      height: 67%;
+      top: 29px;
+      left: 11px;
+    }
+    //---убираем рамку последнему елементу, селектор не применяется----
+    // &:last-child {
+    //   border-left: none;
+    // }
+  }
+  // --- убираем рамку последнему елементу, попытка 2, селектор не применяется----
+  // &::before:last-child {
+  //   content: '';
+  //   border-left: none;
+  // }
+  // ------убираем линию последнему елементу через отдельный клас----
+  &.guarantee-list__text--last::before {
+    content: '';
+    border-left: none;
+  }
+
+  @include mq(tablet) {
+    //-----задаем высоту елементу текста для сходста по макету до пикселя----
+
+    // padding-left: 40px;
+  }
+  @include mq(desktop) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    //-----задаем высоту елементу текста для сходста по макету до пикселя----
+    // height: 60px;
+
+    padding-left: 52px;
+  }
+}
+
+.guarantee-list__text--orange {
+  color: var(--brand-color);
+}
