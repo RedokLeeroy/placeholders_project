@@ -143,6 +143,9 @@
 .reviews-group__link {
   color: var(--brand-color);
   text-decoration: underline;
+  &:hover{
+    cursor: pointer;
+  }
 }
 .reviews-photo {
   display: flex;
@@ -166,7 +169,7 @@
   &:focus {
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid var(--brand-color);
+    outline: 1px solid var(--brand-color);
   }
   @include mq(mobile-only) {
     &:not(:nth-child(-n + 3)) {
