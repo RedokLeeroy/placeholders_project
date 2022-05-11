@@ -109,6 +109,9 @@
   height: 178px;
   margin: auto;
 
+  transform: scale(1);
+  transition: transform 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 50ms;
+
   @include mq(tablet) {
     width: 376px;
     height: 320px;
@@ -123,14 +126,25 @@
     top: -90px;
     right: -128px;
   }
+
+  .hero__img-box:hover & {
+    transform: scale(1.2);
+  }
 }
 
 .hero__btn {
   @extend .btn--accent;
 
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
   margin-bottom: 55px;
 
   @include mq(tablet) {
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 0px;
   }
 
@@ -141,5 +155,7 @@
     line-height: 1.21;
     letter-spacing: 0.14em;
     margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
