@@ -19,8 +19,8 @@
   }
 
   @include mq(desktop) {
-    background-position: 50% 50px;
-    background-size: 1688px 880px;
+    background-position: 50% 0%;
+    background-size: 1856px 958px;
   }
 }
 
@@ -38,7 +38,7 @@
   }
 
   @include mq(desktop) {
-    max-width: 1366px;
+    max-width: 1346px;
     padding-left: 16px;
     padding-right: 16px;
   }
