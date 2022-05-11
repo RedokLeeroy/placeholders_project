@@ -9,7 +9,6 @@
   }
 
   @include mq(desktop) {
-    max-width: 1688px;
     margin: 0px auto;
     background: linear-gradient(transparent 77%, var(--bg-color-primary) 23%) no-repeat,
       url(../images/icon/fire_bg.svg) no-repeat,
