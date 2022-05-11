@@ -1,8 +1,6 @@
 .about__container {
     padding-top: 50px;
     padding-bottom: 50px;
-
-    outline: 1px solid maroon;
 }
 
 .about__title {
@@ -29,7 +27,6 @@
     margin-bottom: 20px;
 
     @include mq(tablet) {
-            // display: flex;
             flex-direction: row;
     }
 }
@@ -57,8 +54,6 @@
     @include mq(desktop) {
         max-width: 642px;
     }
-    
-    outline: 2px dotted green;
 }
 
 .about__name {
