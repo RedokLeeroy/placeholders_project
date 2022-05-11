@@ -1,28 +1,56 @@
 .programs {
-  padding-top: 50px;
-  padding-bottom: 50px;
-
   font-weight: 500;
   font-size: 18px;
   line-height: 1.55;
+  letter-spacing: 0.08;
 
   font-family: var(--primary-font);
   color: var(--second-text-color);
   background-color: var(--bg-color-second);
 
-  @include mq(tablet) {
-    padding-top: 60px;
-    padding-bottom: 108px;
-  }
+  &__container {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
+    @include mq(tablet-only) {
+      padding-top: 60px;
+      padding-bottom: 130px;
+    }
+    @include mq(desktop) {
+      padding-top: 120px;
+      padding-bottom: 164px;
+    }
+  }
+}
+.prog__num {
+  font-size: 14px;
+  line-height: 2;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include mq(tablet) {
+    line-height: 1.65;
+  }
   @include mq(desktop) {
-    padding-top: 124px;
-    padding-bottom: 164px;
+    font-size: 30px;
+    line-height: 0.93;
   }
 }
 
-.programs__container {
-  position: relative;
+.programs__head-title {
+  font-size: 14px;
+  line-height: 2;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include mq(tablet-only) {
+    line-height: 1.65;
+  }
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }
 
 .programs__chapter {
@@ -30,19 +58,15 @@
 
   @include mq(mobile-only) {
     flex-direction: column;
-
-    margin-left: 100px;
+    margin-left: 120px;
   }
-
   @include mq(tablet-only) {
     display: block;
 
     margin-left: 120px;
   }
-
   @include mq(desktop) {
     display: flex;
-    flex-wrap: row;
   }
 }
 
@@ -51,10 +75,11 @@
   @include mq(desktop) {
     margin-right: 30px;
   }
-}
-.programs__head:last-child {
-  @include mq(desktop) {
-    margin-right: 0px;
+
+  &:last-child {
+    @include mq(desktop) {
+      margin-right: 0px;
+    }
   }
 }
 
@@ -63,13 +88,15 @@
     position: absolute;
     top: 8px;
     left: -28px;
+
     content: '';
     width: 1px;
-    height: calc(100% + 50px);
+    height: calc(100% + 10px);
 
     background-color: var(--second-text-color);
   }
 }
+
 .programs__head:last-child::before {
   height: 4px;
 }
@@ -79,9 +106,10 @@
     position: absolute;
     top: 8px;
     left: -57px;
+
     content: '';
     width: 1px;
-    height: calc(100% + 60px);
+    height: calc(100% + 40px);
 
     background-color: var(--second-text-color);
   }
@@ -93,27 +121,25 @@
 .programs__head:first-child::before {
   @include mq(desktop) {
     position: absolute;
-    top: -0px;
+    top: -60px;
     left: -30px;
+
     content: '';
     height: 1px;
     width: 100vw;
-
     background-color: var(--second-text-color);
   }
-
-  .programs__head::before {
+  &::before {
     width: 0px;
   }
 }
 .programs__title {
   font-weight: 800;
-  font-size: 20px;
-  line-height: 1.66;
-  margin-bottom: 43px;
 
   @include mq(mobile-only) {
     text-align: center;
+    line-height: 1.3;
+    margin-bottom: 50px;
   }
   @include mq(tablet) {
     font-size: 26px;
@@ -124,7 +150,7 @@
 
   @include mq(desktop) {
     font-size: 46px;
-    margin-bottom: 100px;
+    margin-bottom: 160px;
   }
 }
 .programs__head-title::before {
@@ -142,35 +168,13 @@
 
     left: -65px;
   }
-
   @include mq(desktop) {
     top: -68px;
     left: 0px;
   }
-}
-
-.programs__head-title {
-  position: relative;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 2;
-  font-family: var(--primary-font);
-  text-transform: uppercase;
-
-  @include mq(tablet) {
-    line-height: 2;
-    margin-top: 60px;
-    margin-bottom: 5px;
+  &:last-child {
+    margin-right: 0;
   }
-
-  @include mq(desktop) {
-    font-size: 28px;
-    text-transform: lowercase;
-  }
-}
-
-.programs__head-title:last-child {
-  margin-right: 0;
 }
 
 .programs__sublist::before {
@@ -178,6 +182,7 @@
   bottom: 9px;
   left: 0px;
   content: '';
+
   width: 12px;
   height: 2px;
 
@@ -191,7 +196,6 @@
 
   @include mq(desktop) {
     bottom: 16px;
-    left: 0px;
     width: 20px;
     height: 2px;
   }
@@ -200,19 +204,29 @@
 .programs__subhead {
   display: flex;
   flex-direction: column;
+
+  @include mq(tablet-only) {
+    margin-right: 50px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .programs__head:not(:last-child) {
   @include mq(mobile-only) {
-    margin-bottom: 42px;
+    //margin-bottom: 42px;
   }
 }
 
 .programs__card {
   @include mq(mobile-only) {
+    margin-top: 8px;
     margin-bottom: 8px;
   }
 }
+
 .programs__sublist {
   position: relative;
   padding-left: 18px;
@@ -220,19 +234,15 @@
   line-height: 1.66;
   color: var(--brand-color);
   font-size: 12px;
-  margin-top: 5px;
-  margin-bottom: 10px;
 
-  @include mq(tablet) {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   @include mq(desktop) {
     font-size: 20px;
     padding-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-bottom: 10px;
   }
 }
 
@@ -241,69 +251,46 @@
   line-height: 1.66;
   font-size: 12px;
 
-  width: 143px;
-
   @include mq(tablet) {
     width: 176px;
     font-weight: 500;
-    letter-spacing: 0;
+    letter-spacing: 1.6;
   }
-
   @include mq(desktop) {
     font-size: 18px;
     width: 240px;
   }
 }
-
-.programs__list:last-child {
-  margin-bottom: 0px;
-}
-
-.programs__subhead {
-  @include mq(tablet) {
-    margin-right: 50px;
+.small {
+  @include mq(tablet-only) {
+    width: 109px;
   }
 }
-.programs__subhead:last-child {
-  @include mq(tablet) {
-    margin-right: 0px;
-  }
-}
-
-.programs__subhead {
-  @include mq(desktop) {
-    margin-right: 30px;
-  }
-}
-.programs__subhead:last-child {
-  @include mq(desktop) {
-    margin-right: 0px;
+.middl {
+  @include mq(tablet-only) {
+    width: 155px;
   }
 }
 
 .programs__head-subtitle {
-  width: 143px;
-
   @include mq(mobile-only) {
+    width: 143px;
     flex-direction: column;
-    margin-top: 5px;
   }
-
   @include mq(tablet) {
-    margin-top: 5px;
     display: flex;
-  }
+    margin-bottom: 30px;
 
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
   @include mq(desktop) {
-    display: flex;
     flex-direction: column;
-    width: 240px;
-    margin-top: 25px;
   }
 }
 
 .programs__container::before {
-  // outline: 1px solid red;
   content: '';
   z-index: 1;
   display: block;
@@ -311,7 +298,7 @@
   height: 137px;
 
   position: absolute;
-  bottom: -91px;
+  bottom: -41px;
   right: 0;
 
   background-size: cover;
@@ -328,7 +315,7 @@
     height: 280px;
 
     right: 0;
-    bottom: -108px;
+    bottom: 0;
 
     background-image: url(../images/program/program_bcg_md.png);
 
@@ -341,7 +328,7 @@
     width: 760px;
     height: 502px;
 
-    bottom: -325px;
+    bottom: -120px;
     left: -255px;
 
     background-image: url(../images/program/program_bcg_lg.png);
