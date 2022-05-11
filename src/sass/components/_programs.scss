@@ -1,40 +1,40 @@
-.programs__container {
+.programs {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 1.55;
 
   font-family: var(--primary-font);
   color: var(--second-text-color);
-}
-
-.programs {
   background-color: var(--bg-color-second);
-  padding-top: 50px;
-  padding-bottom: 50px;
 
   @include mq(tablet) {
-    max-width: 768px;
     padding-top: 60px;
-    padding-bottom: 189px;
+    padding-bottom: 108px;
   }
 
   @include mq(desktop) {
-    max-width: 1366px;
     padding-top: 124px;
     padding-bottom: 164px;
   }
 }
 
+.programs__container {
+  position: relative;
+}
+
 .programs__chapter {
   display: flex;
 
-  @media screen and (max-width: 766px) {
+  @include mq(mobile-only) {
     flex-direction: column;
 
     margin-left: 100px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1364px) {
+  @include mq(tablet-only) {
     display: block;
 
     margin-left: 120px;
@@ -59,7 +59,7 @@
 }
 
 .programs__head::before {
-  @media screen and (max-width: 766px) {
+  @include mq(mobile-only) {
     position: absolute;
     top: 8px;
     left: -28px;
@@ -71,55 +71,48 @@
   }
 }
 .programs__head:last-child::before {
-  height: 0px;
+  height: 4px;
 }
 
 .programs__head::before {
-  @media screen and (min-width: 768px) and (max-width: 1364px) {
+  @include mq(tablet-only) {
     position: absolute;
     top: 8px;
     left: -57px;
     content: '';
     width: 1px;
-    height: calc(100% + 40px);
+    height: calc(100% + 60px);
 
     background-color: var(--second-text-color);
   }
-
+}
 .programs__head:last-child::before {
   height: 0px;
 }
-}
 
-.programs__head::before {
-  @media screen and (min-width: 1366px){
+.programs__head:first-child::before {
+  @include mq(desktop) {
     position: absolute;
-    top: -30px;
-    left: -40px;
+    top: -0px;
+    left: -30px;
     content: '';
     height: 1px;
-    width: calc(1366px + 80px);
+    width: 100vw;
 
     background-color: var(--second-text-color);
   }
 
-    .programs__head:not(:first-child)::before {
+  .programs__head::before {
     width: 0px;
-
-
+  }
 }
-}
-
-
-
-
 .programs__title {
   font-weight: 800;
   font-size: 20px;
   line-height: 1.66;
   margin-bottom: 43px;
 
-  @media screen and (max-width: 766px) {
+  @include mq(mobile-only) {
     text-align: center;
   }
   @include mq(tablet) {
@@ -131,7 +124,7 @@
 
   @include mq(desktop) {
     font-size: 46px;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
 }
 .programs__head-title::before {
@@ -166,7 +159,7 @@
 
   @include mq(tablet) {
     line-height: 2;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 5px;
   }
 
@@ -210,13 +203,13 @@
 }
 
 .programs__head:not(:last-child) {
-  @media screen and (max-width: 766px) {
+  @include mq(mobile-only) {
     margin-bottom: 42px;
   }
 }
 
 .programs__card {
-  @media screen and (max-width: 766px) {
+  @include mq(mobile-only) {
     margin-bottom: 8px;
   }
 }
@@ -267,11 +260,6 @@
 }
 
 .programs__subhead {
-  display: flex;
-  width: 143px;
-}
-
-.programs__subhead {
   @include mq(tablet) {
     margin-right: 50px;
   }
@@ -294,16 +282,16 @@
 }
 
 .programs__head-subtitle {
-  display: flex;
   width: 143px;
 
-  @media screen and (max-width: 766px) {
+  @include mq(mobile-only) {
     flex-direction: column;
     margin-top: 5px;
   }
 
   @include mq(tablet) {
     margin-top: 5px;
+    display: flex;
   }
 
   @include mq(desktop) {
@@ -311,5 +299,55 @@
     flex-direction: column;
     width: 240px;
     margin-top: 25px;
+  }
+}
+
+.programs__container::before {
+  // outline: 1px solid red;
+  content: '';
+  z-index: 1;
+  display: block;
+  width: 176px;
+  height: 137px;
+
+  position: absolute;
+  bottom: -91px;
+  right: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: url(../images/program/program_bcg_sm.png);
+
+  @include mq(retina) {
+    background-image: url(../images/program/program_bcg@2x_sm.png);
+  }
+
+  @include mq(tablet) {
+    width: 384px;
+    height: 280px;
+
+    right: 0;
+    bottom: -108px;
+
+    background-image: url(../images/program/program_bcg_md.png);
+
+    @include mq(retina) {
+      background-image: url(../images/program/program_bcg@2x_md.png);
+    }
+  }
+
+  @include mq(desktop) {
+    width: 760px;
+    height: 502px;
+
+    bottom: -325px;
+    left: -255px;
+
+    background-image: url(../images/program/program_bcg_lg.png);
+
+    @include mq(retina) {
+      background-image: url(../images/program/program_bcg@2x_lg.png);
+    }
   }
 }
