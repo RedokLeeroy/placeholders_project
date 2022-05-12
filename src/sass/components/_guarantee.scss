@@ -1,14 +1,13 @@
 .guarantee__container {
-  padding: 0;
-
-  @include mq(tablet) {
-    padding-left: 40px;
-    padding-right: 40px;
+  @include mq(mobile-only) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 0;
+    padding-right: 0;
   }
   @include mq(desktop) {
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 65px;
+    padding-bottom: 65px;
 
     //---если не ставить эти значения при размере екрана 1680 макет не сходится по переносу текста--
   }

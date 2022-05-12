@@ -11,15 +11,15 @@
   &__container {
     position: relative;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 
     @include mq(tablet-only) {
-      padding-top: 60px;
+      padding-top: 50px;
       padding-bottom: 160px;
     }
     @include mq(desktop) {
-      padding-top: 120px;
-      padding-bottom: 164px;
+      padding-top: 130px;
+      padding-bottom: 100px;
     }
   }
 }

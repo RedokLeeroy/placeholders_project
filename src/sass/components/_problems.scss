@@ -16,18 +16,21 @@
         padding-box;
     background-size: 100%, 420px 618px, 100%;
     background-position: 100%, 77vmax 90px, 100%;
-    padding-top: 40px;
   }
 }
 
 .problems__container {
   padding-top: 25px;
+  padding-bottom: 50px;
 
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     padding-top: 50px;
+    padding-bottom: 25px;
   }
+
   @include mq(desktop) {
-    padding-top: 65px;
+    padding-top: 100px;
+    padding-bottom: 65px;
   }
 }
 
