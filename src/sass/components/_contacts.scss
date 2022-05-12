@@ -2,9 +2,22 @@
   max-width: 1680px;
   margin-right: auto;
   margin-left: auto;
+
   background-size: cover;
+  background-position: center;
   background-color: var(--bg-color-second);
   background-image: url(../images/contacts/footer_sm.png);
+  padding-top: 56px;
+  padding-bottom: 55px;
+  @include mq(tablet) {
+    padding-top: 66px;
+    padding-bottom: 67px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 100px;
+    padding-bottom: 62px;
+  }
 
   @include mq(retina) {
     background-image: url(../images/contacts/footer@2x_sm.png);
@@ -27,22 +40,9 @@
 }
 
 .contacts__container {
-  padding-top: 56px;
-  padding-bottom: 55px;
-
   max-width: 1090px;
   margin-right: auto;
   margin-left: auto;
-
-  @include mq(tablet) {
-    padding-top: 66px;
-    padding-bottom: 67px;
-  }
-
-  @include mq(desktop) {
-    padding-top: 100px;
-    padding-bottom: 62px;
-  }
 }
 
 .contacts__title {
@@ -102,54 +102,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.contacts__form__name {
-  max-width: 390px;
-  height: 48px;
-
-  width: 100%;
-
-  padding-left: 28px;
-  margin-bottom: 20px;
-  background-color: transparent;
-  border: 1px solid var(--bg-color-primary);
-
-  color: var(--second-text-color);
-  &::placeholder {
-    color: var(--second-text-color);
-  }
-
-  &:hover,
-  &:focus {
-    outline: transparent;
-  }
-
-  @include mq(desktop) {
-    max-width: 478px;
-    height: 70px;
-  }
-}
-
-.contacts__form__phone {
-  max-width: 390px;
-  height: 48px;
-
-  width: 100%;
-
-  padding-left: 28px;
   margin-bottom: 50px;
+}
 
+.contacts__form__input {
+  max-width: 390px;
+  height: 48px;
+
+  width: 100%;
+
+  padding-left: 28px;
   background-color: transparent;
-  color: var(--second-text-color);
   border: 1px solid var(--bg-color-primary);
+  margin-bottom: 20px;
+
+  color: var(--second-text-color);
+
+  transition-property: border-color;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &::placeholder {
     color: var(--second-text-color);
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
   }
 
   &:hover,
   &:focus {
     outline: transparent;
+  }
+
+  &:valid:not(:placeholder-shown) {
+    border-color: #4caf50;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #f44336;
   }
 
   @include mq(desktop) {
@@ -160,6 +150,34 @@
 
 .btn--position {
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 400%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background: var(--bg-color-primary);
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 155%;
+  }
+
+  &:hover {
+    color: var(--brand-color);
+    outline: 2px solid var(--brand-color);
+  }
 }

@@ -1,4 +1,4 @@
-<section class="contacts">
+<section class="contacts" name="contacts" id="contacts">
   <div class="container">
     <div class="contacts__container">
       <h2 class="contacts__title">
@@ -11,8 +11,26 @@
         answer your questions
       </p>
       <form class="contacts__form">
-        <input class="contacts__form__name" type="text" name="name" placeholder="Name*" />
-        <input class="contacts__form__phone" type="text" name="phone" placeholder="Phone*" />
+        <input
+          class="contacts__form__input"
+          type="text"
+          name="name"
+          placeholder="Name*"
+          minlength="3"
+          maxlength="15"
+          pattern="^[a-zA-Z]+$"
+          title="Please type youre name in english."
+        />
+        <input
+          class="contacts__form__input"
+          type="text"
+          name="phone"
+          placeholder="Phone*"
+          minlength="10"
+          maxlength="17"
+          title="Please type youre mobile phone number."
+          pattern="(^\+?[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{3}|^\+?[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})"
+        />
       </form>
       <button class="btn--accent btn--position" type="submit">I want a free lesson</button>
     </div>

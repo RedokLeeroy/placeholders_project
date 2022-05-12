@@ -1,17 +1,23 @@
-.guarantee .container {
-  //----изменяем контейнер по макету----
-  @include mq(mobile-small) {
-    padding: 0;
-  }
-  @include mq(mobile) {
-    padding: 0;
-  }
-  @include mq(tablet-only) {
-    padding: 0 40px;
-  }
+.guarantee {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
   @include mq(desktop) {
-    margin-left: 183px;
-    margin-right: 183px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .guarantee__container {
+    @include mq(mobile-only) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    //---если не ставить эти значения при размере екрана 1680 макет не сходится по переносу текста--
+  }
+  @include mq(retina) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -20,29 +26,14 @@
   letter-spacing: 0.03em;
   background-color: #fff;
   //----стили и размеры текста заголовка----
-  @include mq(mobile-small) {
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 1.3;
 
-    margin-bottom: 30px;
-  }
-  @include mq(mobile) {
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 1.3;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.3;
 
-    margin-bottom: 30px;
-  }
-  @include mq(tablet-only) {
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 1.3;
+  margin-bottom: 30px;
 
-    margin-bottom: 30px;
-  }
   @include mq(desktop) {
-    font-weight: 800;
     font-size: 46px;
     line-height: 1.3;
     margin-bottom: 50px;
@@ -52,43 +43,57 @@
   display: flex;
   flex-direction: column;
   background-color: #f1f1f1;
-  @include mq(mobile-small) {
-    padding: 50px 20px;
-  }
-  @include mq(mobile) {
-    padding: 50px 20px;
-  }
-  @include mq(tablet-only) {
+
+  padding: 50px 20px;
+
+  @include mq(tablet) {
     padding: 30px 50px 30px 79px;
   }
   @include mq(desktop) {
     padding: 50px 112px 45px 112px;
   }
 }
+
 .guarantee-list__item {
   position: relative;
-  //---задаем нижине отступы между елементами для разных устройств---
-  @include mq(mobile-small) {
-    &:not(:last-child) {
-      margin-bottom: 23px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  //------подключаем и позиционруем свг через before-------//
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/icon/fire.svg);
+    height: 20px;
+    width: 15px;
+    @include mq(desktop) {
+      transform: translateX(5px) scale(1.5);
     }
   }
-  @include mq(mobile) {
+
+  @include mq(tablet) {
     &:not(:last-child) {
-      margin-bottom: 23px;
+      margin-bottom: 20px;
     }
   }
   @include mq(tablet) {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    //---для desktop маржин не задаем, он применяется от таблета---
   }
 }
 
 .guarantee .guarantee-list__text {
   font-family: var(--primary-font);
+  padding-left: 35px;
 
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: normal;
   color: #3d3d3d;
   //----создаем и позиционируем левую штрих линию через бордер----
   &::before {
@@ -98,13 +103,8 @@
     position: absolute;
     top: 24px;
     left: 6px;
-    //---задаем высоту штрих линии отностиельно размера родительского елемента--
-    @include mq(mobile-small) {
-      height: 90%;
-    }
-    @include mq(mobile) {
-      height: 90%;
-    }
+    height: 90%;
+
     @include mq(tablet) {
       height: 79%;
     }
@@ -128,51 +128,23 @@
     content: '';
     border-left: none;
   }
-  //-----стили текста и отсутп от иконки через левый паддинг------
-  @include mq(mobile-small) {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.67;
 
-    padding-left: 35px;
-  }
-  @include mq(mobile) {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.67;
-
-    padding-left: 40px;
-  }
   @include mq(tablet) {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.67;
     //-----задаем высоту елементу текста для сходста по макету до пикселя----
-    height: 38px;
 
-    padding-left: 40px;
+    // padding-left: 40px;
   }
   @include mq(desktop) {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
     //-----задаем высоту елементу текста для сходста по макету до пикселя----
-    height: 60px;
+    // height: 60px;
 
     padding-left: 52px;
   }
 }
 
 .guarantee-list__text--orange {
-  color: #ff6b09;
-}
-.guarantee-list__icon {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  //---смещаем и увеличиваем иконку для по макету для desktop-----
-  @include mq(desktop) {
-    transform: translateX(5px) scale(1.5);
-  }
+  color: var(--brand-color);
 }
