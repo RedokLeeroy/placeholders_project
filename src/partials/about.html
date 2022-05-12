@@ -53,15 +53,48 @@
           (University of Houston).
         </p>
 
-        <a
-          class="about__certificate"
-          href="https://www.cambridgeenglish.org/exams-and-tests/preliminary-for-schools/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <button class="btn__certificate" type="button" data-modal-open-certificate>
           Cambrige English Entry Level Certificate
-        </a>
+        </button>
       </div>
+    </div>
+  </div>
+
+  <div class="backdrop is-hidden" data-modal-certificate="">
+    <div class="modal about__modal">
+      <button class="modal__close" type="button" data-modal-close-certificate>
+        <svg class="modal__icon" width="11" height="11">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <picture>
+        <source
+          media="(min-width: 1366px)"
+          srcset="./images/about/certificate.jpg"
+          type="image/jpg"
+          sizes="1200px"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/about/certificate.jpg"
+          type="image/jpg"
+          sizes="720px"
+        />
+        <source
+          media="(min-width: 480px)"
+          srcset="./images/about/certificate.jpg"
+          type="image/jpg"
+          sizes="450px"
+        />
+        <img
+          class=""
+          src="./images/about/certificate.jpg"
+          alt="Certificate"
+          width="1210"
+          height="1725"
+          loading="lazy"
+        />
+      </picture>
     </div>
   </div>
 </section>
