@@ -48,10 +48,10 @@
     bottom: -80px;
     @include mq(tablet) {
       top: 50%;
-      left: 0;
+      left: -20px;
     }
     @include mq(desktop) {
-      left: -40px;
+      left: -90px;
     }
   }
   & .slick-next {
@@ -59,10 +59,10 @@
     bottom: -80px;
     @include mq(tablet) {
       top: 50%;
-      right: 0;
+      right: -20px
     }
     @include mq(desktop) {
-      right: -40px;
+		right: -90px
     }
   }
 }
@@ -164,18 +164,18 @@
   }
 }
 .revievs-nav__item {
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   border-radius: 50%;
   box-sizing: border-box;
 
   &:not(:last-child) {
-    margin-right: 10px;
-    @include mq(mobile-only) {
-      margin-right: 20px;
+    margin-right: 20px;
+    @include mq(tablet) {
+		margin-right: 30px;
     }
   }
   &.slick-current {
-    border: 3px solid var(--brand-color);
+    border: 1px solid var(--brand-color);
     border-radius: 50%;
     box-sizing: border-box;
   }
