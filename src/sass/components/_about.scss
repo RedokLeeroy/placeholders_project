@@ -1,6 +1,11 @@
-.about__container {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.about {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include mq(desktop) {
+    padding-bottom: 65px;
+    padding-top: 65px;
+  }
 }
 
 .about__title {
@@ -24,7 +29,6 @@
 .about__photo {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 
   @include mq(tablet) {
     flex-direction: row;
@@ -34,9 +38,11 @@
 
 .about__photo-img {
   max-width: 243px;
+  margin-bottom: 20px;
 
   @include mq(tablet) {
     margin-right: 43px;
+    margin-bottom: 0;
   }
   @include mq(desktop) {
     max-width: 530px;

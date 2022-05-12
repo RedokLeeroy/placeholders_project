@@ -1,9 +1,9 @@
-.reviews__container {
+.reviews {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
   @include mq(desktop) {
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 130px;
   }
 }
 .reviews__title {
@@ -183,5 +183,4 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-  
 }

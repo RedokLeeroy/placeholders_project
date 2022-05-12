@@ -1,14 +1,23 @@
 .problems {
+  padding-top: 25px;
+  padding-bottom: 50px;
+
   background-color: var(--bg-color-second);
   background: linear-gradient(var(--bg-color-second) 78%, var(--bg-color-primary) 22%);
   background-position: 100% 100%;
   background-size: 452px 620px;
 
   @include mq(tablet) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+
     background: linear-gradient(var(--bg-color-second) 70%, var(--bg-color-primary) 30%);
   }
 
   @include mq(desktop) {
+    padding-top: 100px;
+    padding-bottom: 65px;
+
     margin: 0px auto;
     background: linear-gradient(transparent 77%, var(--bg-color-primary) 23%) no-repeat,
       url(../images/icon/fire_bg.svg) no-repeat,
@@ -16,18 +25,6 @@
         padding-box;
     background-size: 100%, 420px 618px, 100%;
     background-position: 100%, 77vmax 90px, 100%;
-    padding-top: 40px;
-  }
-}
-
-.problems__container {
-  padding-top: 25px;
-
-  @include mq(tablet) {
-    padding-top: 50px;
-  }
-  @include mq(desktop) {
-    padding-top: 65px;
   }
 }
 
