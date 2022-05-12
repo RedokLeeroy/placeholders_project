@@ -7,8 +7,17 @@
 
   @include mq(desktop) {
     padding-top: 100px;
-    max-width: 1688px;
     margin: 0px auto;
+
+    background: url(../images/hero/group57_lg.png) no-repeat;
+    background-size: 842px 718px;
+    background-position: 48vmax 0px;
+
+    @include mq(retina) {
+      background: url(../images/hero/group57@2x_lg.png) no-repeat;
+      background-size: 842px 718px;
+      background-position: 48vmax 0px;
+    }
   }
 }
 
@@ -102,15 +111,14 @@
 .hero__img-box {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  float: right;
 }
 
 .hero__img {
   width: 208px;
   height: 178px;
   margin: auto;
-
-  // transform: scale(1);
-  // transition: transform 650ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 50ms;
 
   @include mq(tablet) {
     width: 376px;
@@ -122,15 +130,7 @@
 
   @include mq(desktop) {
     display: none;
-    // width: 842px;
-    // height: 718px;
-    // top: -90px;
-    // right: -128px;
   }
-
-  // .hero__img-box:hover & {
-  //   transform: scale(1.1);
-  // }
 }
 
 .hero__btn {
@@ -168,7 +168,7 @@
 
   &:hover {
     color: var(--brand-color);
-    border: 2px solid var(--brand-color);
+    outline: 2px solid var(--brand-color);
   }
 
   @include mq(tablet) {
