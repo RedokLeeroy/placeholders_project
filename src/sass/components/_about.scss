@@ -144,12 +144,43 @@
   }
 }
 
-.about__certificate {
+// .about__certificate {
+//   margin-top: 10px;
+//   font-weight: 500;
+//   font-size: 12px;
+//   line-height: 1.7;
+//   text-decoration: underline;
+//   color: var(--brand-color);
+
+//   // - в один рядок при вузькому екрані - //
+//   @media screen and (max-width: 340px) {
+//     font-size: 11px;
+//   }
+//   @include mq(desktop) {
+//     margin-top: auto;
+//     font-size: 18px;
+//   }
+// }
+
+.about__modal {
+  max-width: fit-content;
+  min-height: min-content;
+
+  @include mq(desktop) {
+    max-width: fit-content;
+    max-height: min-content;
+  }
+}
+
+.btn__certificate {
+  width: fit-content;
+
   margin-top: 10px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.7;
   text-decoration: underline;
+  background-color: transparent;
   color: var(--brand-color);
 
   // - в один рядок при вузькому екрані - //
@@ -157,7 +188,7 @@
     font-size: 11px;
   }
   @include mq(desktop) {
-    margin-top: auto;
+    margin-top: 20px;
     font-size: 18px;
   }
 }
