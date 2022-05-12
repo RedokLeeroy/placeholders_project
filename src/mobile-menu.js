@@ -14,7 +14,7 @@
     mobileMenuRef.classList.toggle('is-open');
     tabletMenuRef.classList.toggle('is-open');
 
-    body.classList.toggle('mob-menu__fixed');
+    body.classList.toggle('mob-menu__npmfixed');
     logo.classList.toggle('logo-light');
     logo.classList.toggle('logo-lendscape');
   });
