@@ -73,8 +73,6 @@
 }
 
 .hero__text {
-  display: flex;
-  flex-wrap: wrap;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.57;
@@ -89,6 +87,8 @@
 }
 
 .hero__text--black {
+  margin-bottom: 52px;
+
   @extend .hero__text;
 
   font-weight: 700;
@@ -100,8 +100,6 @@
 
   font-weight: 700;
   color: var(--brand-color);
-
-  margin-bottom: 52px;
 
   @include mq(desktop) {
     color: var(--title-text-color);

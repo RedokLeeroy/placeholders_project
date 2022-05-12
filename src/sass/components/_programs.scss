@@ -1,4 +1,17 @@
 .programs {
+  padding-top: 50px;
+  padding-bottom: 25px;
+
+  @include mq(tablet-only) {
+    padding-top: 50px;
+    padding-bottom: 160px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 130px;
+    padding-bottom: 100px;
+  }
+
   font-weight: 500;
   font-size: 18px;
   line-height: 1.55;
@@ -10,17 +23,6 @@
 
   &__container {
     position: relative;
-    padding-top: 50px;
-    padding-bottom: 25px;
-
-    @include mq(tablet-only) {
-      padding-top: 50px;
-      padding-bottom: 160px;
-    }
-    @include mq(desktop) {
-      padding-top: 130px;
-      padding-bottom: 100px;
-    }
   }
 }
 .prog__num {
@@ -275,7 +277,7 @@
   content: '';
   z-index: 1;
   display: block;
-  width: 176px;
+  width: 120px;
   height: 137px;
 
   position: absolute;
