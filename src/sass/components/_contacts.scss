@@ -2,6 +2,7 @@
   max-width: 1680px;
   margin-right: auto;
   margin-left: auto;
+
   background-size: cover;
   background-position: center;
   background-color: var(--bg-color-second);
@@ -116,6 +117,10 @@
   margin-bottom: 20px;
 
   color: var(--second-text-color);
+
+  transition-property: border-color;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &::placeholder {
     color: var(--second-text-color);
   }

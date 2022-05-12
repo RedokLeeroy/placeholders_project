@@ -1,10 +1,13 @@
-.advant__container {
+.advant {
   padding-top: 45px;
   padding-bottom: 45px;
   @include mq(desktop) {
     padding-top: 100px;
     padding-bottom: 130px;
   }
+}
+
+.advant__container {
   @include mq(mobile-only) {
     padding-left: 52px;
     padding-right: 52px;

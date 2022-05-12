@@ -5,15 +5,21 @@
     var(--second-text-color) 50%
   );
 
+  padding-bottom: 25px;
+  padding-top: 25px;
+
+  @include mq(tablet-only) {
+    padding-top: 30px;
+  }
+  @include mq(desktop) {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
   &__container {
     position: relative;
-    padding-bottom: 25px;
 
-    @include mq(tablet-only) {
-      padding-top: 50px;
-    }
     @include mq(desktop) {
-      margin-bottom: 130px;
       z-index: 100;
     }
   }

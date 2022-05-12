@@ -1,4 +1,4 @@
-<section class="contacts">
+<section class="contacts" name="contacts" id="contacts">
   <div class="container">
     <div class="contacts__container">
       <h2 class="contacts__title">
@@ -26,9 +26,10 @@
           type="text"
           name="phone"
           placeholder="Phone*"
-          minlength="12"
-          maxlength="13"
+          minlength="10"
+          maxlength="17"
           title="Please type youre mobile phone number."
+          pattern="(^\+?[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{3}|^\+?[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})"
         />
       </form>
       <button class="btn--accent btn--position" type="submit">I want a free lesson</button>
