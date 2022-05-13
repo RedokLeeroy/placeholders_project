@@ -4,8 +4,19 @@
   const tabletMenuRef = document.querySelector('[data-menu-tab]');
   const body = document.querySelector('body');
   const logo = document.querySelector('[data-logo]');
+  const navLinks = document.querySelectorAll('.nav__link');
 
-  menuBtnRef.addEventListener('click', () => {
+  menuBtnRef.addEventListener('click', toggleMenu);
+
+  navLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+  function toggleMenu() {
+    const viewPortSize = window.innerWidth;
+
+    if (viewPortSize > 1365) {
+      return;
+    }
+
     const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
     menuBtnRef.classList.toggle('is-open');
@@ -17,5 +28,5 @@
     body.classList.toggle('mob-menu__fixed');
     logo.classList.toggle('logo-light');
     logo.classList.toggle('logo-lendscape');
-  });
+  }
 })();
