@@ -5,7 +5,6 @@
   background-color: var(--bg-color-second);
   background: linear-gradient(var(--bg-color-second) 78%, var(--bg-color-primary) 22%);
   background-position: 100% 100%;
-  background-size: 452px 620px;
 
   @include mq(tablet) {
     padding-top: 50px;
